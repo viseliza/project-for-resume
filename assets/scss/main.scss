@@ -1,0 +1,112 @@
+@use './variables' as *;
+
+
+html.light-mode {
+  --text-primary: rgb(0, 0, 0);
+  --text-primary-rgb: 0, 0, 0;
+  --text-secondary: #9b9b9b;
+  --text-secondary-bold: #666666;
+  --inversion-color: rgb(255, 255, 255);
+  --inversion-color-rgb: 255, 255, 255;
+  --background: #fff;
+  --border-color: rgba(255, 255, 255, 0.5);
+  --secondary-sub-color: #f6f6f6;
+  --secondary-color: #e9e8e9;
+  --toggle-light: #d8dbe0;
+  --toggle-dark: #28292c;
+  --alpha-yellow: #ffff6659;
+  --active-color: #0766ff;
+  --active-color-rgb: 7, 102, 255;
+  --active-color-alpha: #0766ff21;
+  --bg-code: #1e2532;
+  --delete-color: rgba(200, 0, 0, 1);
+  --delete-color-rgb: 200, 0, 0;
+  --accept-color: rgb(0, 156, 0);
+  --accept-color-rgb: 0, 156, 0;
+
+  --code-bg: #e6e7ed;
+  --code-type-null: #965027;
+  --code-type-string: #385f0d;
+  --code-type-number: #965027;
+  --code-type-key: #33635c;
+}
+
+html.dark-mode {
+  --text-primary: rgb(250, 250, 250);
+  --text-secondary: rgb(188, 187, 201);
+  --text-secondary-bold: #666666;
+  --text-primary-rgb: 250, 250, 250;
+  --inversion-color: #0c375a;
+  --background: #070A0B;           
+  --border-color: black;
+  --secondary-sub-color: #f6f6f6;
+  --secondary-color: #e9e8e9;
+  --toggle-light: #d8dbe0;
+  --toggle-dark: #28292c;
+  --alpha-yellow: #ffff6659;
+  --active-color: #0766ff;
+  --active-color-alpha: #0766ff42;
+  --bg-code: #1e2532;
+  --delete-color: rgba(255, 0, 0, 0.5);
+  
+  --code-bg: #000;
+  --code-type-null: #508ec1;
+  --code-type-string: #c08973;
+  --code-type-number: #a9c19f;
+  --code-type-key: #a4dffe;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+
+button:hover, a:hover {
+    cursor: pointer;
+}
